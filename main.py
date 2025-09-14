@@ -13,7 +13,35 @@
 # life_in_weeks(23)
 
 #Test 3
-def greet2(name, location):
-    print(f"Hello, {name} how are you in the {location}?")
+# def greet2(name, location):
+#     print(f"Hello, {name} how are you in the {location}?")
 
-greet2("Kyn", "Philippines")
+# greet2(location = "Philippines", name = "Kyn")
+
+#Test 4
+def calculate_love_score(name1, name2):
+    one = list(name1.lower())
+    two = list(name2.lower())
+
+    true = ["t", "r", "u", "e"]
+    love = ["l", "o", "v", "e"]
+
+    firstDigit = 0
+    secondDigit = 0
+
+    for check in one:
+        if check in true:
+            firstDigit += 1
+        if check in love:
+            secondDigit += 1
+
+    for check in two:
+        if check in true:
+            firstDigit += 1
+        if check in love:
+            secondDigit += 1
+
+    print(str(firstDigit) + str(secondDigit))
+
+
+calculate_love_score("Sunny", "Neph")
