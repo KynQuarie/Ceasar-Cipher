@@ -12,3 +12,8 @@
 #     print(f"You have {left_week} weeks left.")
 # life_in_weeks(23)
 
+#Test 3
+def greet2(name, location):
+    print(f"Hello, {name} how are you in the {location}?")
+
+greet2("Kyn", "Philippines")
