@@ -22,15 +22,12 @@ def encrypt(original_text, shift_amount):
 
     for letter in original_text:
         number = alphabet.index(letter) + shift_amount
-
-        if number > 25:
-            number %= 25
-            number -= 1
+        number %= len(alphabet)
 
         if direction == "decode":
             number = alphabet.index(letter) - shift_amount
-
-        encrypted += alphabet[number]
+        elif direction == "encode":
+            encrypted += alphabet[number]
 
     print(encrypted)
 
