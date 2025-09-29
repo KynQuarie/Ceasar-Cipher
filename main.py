@@ -31,4 +31,20 @@ def encrypt(original_text, shift_amount):
 
     print(encrypted)
 
-encrypt(text, shift)
+def decrypt(original_text, shift_amount):
+    cipher_text = ""
+    for letter in original_text:
+        number = alphabet.index(letter) - shift_amount
+        number %= len(alphabet)
+
+        cipher_text += alphabet[number]
+
+    print(f"Here is the decoded result: {cipher_text}")
+
+def ceasar(text_, shift_, direction_):
+    if direction_ == "encode":
+        encrypt(text_,shift_)
+    elif direction_ == "decode":
+        decrypt(text_,shift_)
+
+ceasar(text, shift)
